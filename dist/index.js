@@ -1,9 +1,10 @@
-"use strict";var f=function(a,i){return function(){return i||a((i={exports:{}}).exports,i),i.exports}};var c=f(function(z,o){
-var k=require('@stdlib/math-base-assert-is-nan/dist'),s=require('@stdlib/math-base-special-abs/dist');function l(a,i,u){var v,n,e,r;if(a<=0)return NaN;if(a===1||u===0)return i[0];for(u<0?n=(1-a)*u:n=0,r=0;r<a&&(e=i[n],e!==e);r++)n+=u;if(r===a)return NaN;for(v=s(e),r+=1,r;r<a;r++)n+=u,e=s(i[n]),!k(e)&&e>v&&(v=e);return v}o.exports=l
-});var x=f(function(A,b){
-var O=require('@stdlib/math-base-assert-is-nan/dist'),q=require('@stdlib/math-base-special-abs/dist');function R(a,i,u,v){var n,e,r,t;if(a<=0)return NaN;if(a===1||u===0)return i[v];for(e=v,t=0;t<a&&(r=i[e],r!==r);t++)e+=u;if(t===a)return NaN;for(n=q(r),t+=1,t;t<a;t++)e+=u,r=q(i[e]),!O(r)&&r>n&&(n=r);return n}b.exports=R
-});var y=f(function(B,p){
-var g=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),m=c(),h=x();g(m,"ndarray",h);p.exports=m
-});var j=y();module.exports=j;
+"use strict";var c=function(a,e){return function(){return e||a((e={exports:{}}).exports,e),e.exports}};var m=c(function(D,x){
+var g=require('@stdlib/math-base-assert-is-nan/dist'),f=require('@stdlib/math-base-special-abs/dist');function j(a,e,n,o){var t,u,v,i,r,s;if(t=e.data,u=e.accessors[0],a===1||n===0)return f(u(t,o));for(i=o,s=0;s<a&&(r=u(t,i),r!==r);s++)i+=n;if(s===a)return NaN;for(v=f(r),s+=1,s;s<a;s++)i+=n,r=f(u(t,i)),!g(r)&&r>v&&(v=r);return v}x.exports=j
+});var b=c(function(E,y){
+var O=require('@stdlib/math-base-assert-is-nan/dist'),q=require('@stdlib/math-base-special-abs/dist'),P=require('@stdlib/array-base-arraylike2object/dist'),R=m();function d(a,e,n,o){var t,u,v,i,r;if(a<=0)return NaN;if(v=P(e),v.accessorProtocol)return R(a,v,n,o);if(a===1||n===0)return q(e[o]);for(u=o,r=0;r<a&&(i=e[u],i!==i);r++)u+=n;if(r===a)return NaN;for(t=q(i),r+=1,r;r<a;r++)u+=n,i=q(e[u]),!O(i)&&i>t&&(t=i);return t}y.exports=d
+});var k=c(function(F,p){
+var h=require('@stdlib/strided-base-stride2offset/dist'),w=b();function z(a,e,n){return w(a,e,n,h(a,n))}p.exports=z
+});var A=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),l=k(),B=b();A(l,"ndarray",B);module.exports=l;
+/** @license Apache-2.0 */
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
